@@ -1,4 +1,4 @@
-const question = document.getElementById('question');
+dddconst question = document.getElementById('question');
 const choices = Array.from(document.getElementsByClassName('choice-text'));
 const progressText = document.getElementById('progressText');
 const scoreText = document.getElementById('score');
@@ -12,15 +12,19 @@ let questionCounter = 0;
 let availableQuesions = [];
 
 let questions = [];
-
+//where the QnA are located
 fetch(
     'https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple'
 )
+    //if this doesnt work then load the json?
     .then((res) => {
         return res.json();
     })
+    //
     .then((loadedQuestions) => {
+      //mapping creates a key, value function
         questions = loadedQuestions.results.map((loadedQuestion) => {
+
             const formattedQuestion = {
                 question: loadedQuestion.question,
             };
