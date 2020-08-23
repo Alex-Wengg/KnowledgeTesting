@@ -8,15 +8,16 @@ let acceptingAnswers = false;
 let score = 0;
 let questionCounter = 0;
 let availableQuesions = [];
-
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 
 
 let questions = [];
 
 
-
-fetch('questions.json').then(res => {
-   return res.json();
+$.getJSON("questions.json", function(json) {
+    console.log(json); // this will show the info it in firebug console
+}).then(res => {
+    return res.json();
 })
 .then(loadedQuestions => {
 
