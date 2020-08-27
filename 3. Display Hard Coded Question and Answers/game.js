@@ -53,6 +53,7 @@ getNewQuestion = () => {
     }
     questionCounter++;
     const questionIndex = Math.floor(Math.random() * availableQuesions.length);
+    console.log(questionIndex);
     currentQuestion = availableQuesions[questionIndex];
     question.innerText = currentQuestion.question;
 
@@ -64,9 +65,19 @@ getNewQuestion = () => {
     availableQuesions.splice(questionIndex, 1);
     acceptingAnswers = true;
 };
+function myFunction() {
+      var x = document.getElementById("myInput").value;
+    if (x==currentQuestion) {
+      document.getElementById("demo").innerHTML =  currentQuestion;
 
+    } else {
+      document.getElementById("demo").innerHTML = currentQuestion.answer  ;
+  //  block of code to be executed if the condition is false
+}
+}
 choices.forEach((choice) => {
-    choice.addEventListener('click', (e) => {
+
+     choice.addEventListener('input', (e) => {
         if (!acceptingAnswers) return;
 
         acceptingAnswers = false;
