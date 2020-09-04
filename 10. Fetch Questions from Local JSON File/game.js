@@ -12,6 +12,8 @@ let availableQuesions = [];
 
 let questions = [];
 
+
+
 fetch('questions.json')
     .then((res) => {
         return res.json();
@@ -34,6 +36,11 @@ startGame = () => {
     availableQuesions = [...questions];
     getNewQuestion();
 };
+
+test = () => {
+  var x = document.getElementById("myCheck");
+  x.checked = true;
+}
 
 getNewQuestion = () => {
     if (availableQuesions.length === 0 || questionCounter >= MAX_QUESTIONS) {
@@ -83,6 +90,12 @@ choices.forEach((choice) => {
     });
 });
 
+var inputBox = document.getElementById('chatinput');
+
+  inputBox.onkeyup = function(){
+      document.getElementById('printchatbox').innerHTML = inputBox.value;
+  };
+ 
 incrementScore = (num) => {
     score += num;
     scoreText.innerText = score;
