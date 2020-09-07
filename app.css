@@ -1,6 +1,7 @@
 :root {
-  #background-color: #000000;
+  background-color: #6fb1cc;
   font-size: 62.5%;
+
 }
 
 
@@ -9,7 +10,7 @@
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
-  color: #333;
+  color: 565aeb;
 }
 
 h1,
@@ -21,7 +22,7 @@ h4 {
 
 h1 {
   font-size: 5.4rem;
-  color: #56a5eb;
+  color: #565aeb;
   margin-bottom: 5rem;
 }
 

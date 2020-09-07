@@ -1,4 +1,4 @@
- 
+
 
 
 .choice-container {
@@ -19,7 +19,7 @@
 
 .choice-prefix {
   padding: 1.5rem 2.5rem;
-  background-color: #56a5eb;
+  background-color: #565aeb;
   color: white;
 }
 
@@ -55,12 +55,12 @@
 #progressBar {
   width: 20rem;
   height: 4rem;
-  border: 0.3rem solid #56a5eb;
+  border: 0.3rem solid #565aeb;
   margin-top: 1.5rem;
 }
 
 #progressBarFull {
   height: 3.4rem;
-  background-color: #56a5eb;
+  background-color: #565aeb;
   width: 0%;
 }
